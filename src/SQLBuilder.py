@@ -39,8 +39,8 @@ class SQLQueryBuilder:
         if self.query_type == "SELECT":
             return f"{self.query_type} * FROM {self.table_name} {self.where_str};"
         elif self.query_type == "INSERT INTO":
-            columns = ', '.join(self.config[self.table_name]['columns'])
-            values = ', '.join(['%s'] * len(self.config[self.table_name]['columns']))
+            columns = ', '.join(c for c in self.config[self.table_name]['columns'] if c != 'id')
+            values = ', '.join(['"%s"'] * len(columns.split(","))) # -1 to exclude the id column
             return f"{self.query_type} {self.table_name} ({columns}) VALUES({values});"
         elif self.query_type == "UPDATE":
             return f"{self.query_type} {self.table_name} SET {self.set_str} {self.where_str};"

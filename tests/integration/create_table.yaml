@@ -1,0 +1,17 @@
+users:
+  columns:
+    - id
+    - name
+    - email
+    - password
+  primary_key: id
+
+orders:
+  columns:
+    - id
+    - user_id
+    - product
+    - quantity
+  primary_key: id
+  foreign_keys:
+    user_id: users(id)
