@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Norbert Parti <norbertparti07@gmail.com>"]
 readme = "README.md"
-packages = [{include = "poetry_demo"}]
+packages = [{include = "PyToSQL"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
