@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "PyToSQL"
+version = "0.1.0"
+description = ""
+authors = ["Norbert Parti <norbertparti07@gmail.com>"]
+readme = "README.md"
+packages = [{include = "poetry_demo"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyyaml = "^6.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,6 +1,6 @@
 """Tesing the SQLQueryBuilder class with Table creation and data insertion"""
 
-from SQLBuilder import SQLQueryBuilder
+from PyToSQL.SQLBuilder import SQLQueryBuilder
 
 import sqlite3
 import yaml
